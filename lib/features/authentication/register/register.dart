@@ -8,15 +8,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
+    AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     return Scaffold( 
       appBar: AppBar( 
-        title: Text('Register'),
+        title: Text(appLocalizations.register),
       ),
       body: Padding(
         padding:  REdgeInsets.symmetric(horizontal: 16),
@@ -30,21 +32,21 @@ class Register extends StatelessWidget {
                 SizedBox(
               height: 24.h,
             ),
-            CustomTextFormFeild(label: 'Name', prefixIcon: Icons.person,keyboardType: TextInputType.name,),
+            CustomTextFormFeild(label: appLocalizations.name, prefixIcon: Icons.person,keyboardType: TextInputType.name,),
             SizedBox(height: 16.h,) 
-            ,CustomTextFormFeild(label: 'E-mail', prefixIcon: Icons.mail,keyboardType: TextInputType.emailAddress,),
+            ,CustomTextFormFeild(label: appLocalizations.email, prefixIcon: Icons.mail,keyboardType: TextInputType.emailAddress,),
             SizedBox(height: 16.h,), 
-            CustomTextFormFeild(label: 'Password', prefixIcon: Icons.lock,keyboardType: TextInputType.visiblePassword,suffixIcon: Icons.visibility_off,),
+            CustomTextFormFeild(label: appLocalizations.password, prefixIcon: Icons.lock,keyboardType: TextInputType.visiblePassword,suffixIcon: Icons.visibility_off,),
             SizedBox(height: 16.h,),
-             CustomTextFormFeild(label: 'Re Password', prefixIcon: Icons.lock,keyboardType: TextInputType.visiblePassword,suffixIcon: Icons.visibility_off,),
+             CustomTextFormFeild(label: appLocalizations.re_password, prefixIcon: Icons.lock,keyboardType: TextInputType.visiblePassword,suffixIcon: Icons.visibility_off,),
             SizedBox(height: 16.h,), 
-            CustomElevatedBottom(title: 'Create Account',), 
+            CustomElevatedBottom(title: appLocalizations.create_account,),
 
             Row(
                
               children: [  
-                Text('Already Have Account? ',), 
-                CustomTextBottom(title: 'Login', onPressed: (){
+                Text(appLocalizations.already_have_account,),
+                CustomTextBottom(title: appLocalizations.login, onPressed: (){
                   Navigator.pushReplacementNamed(context, RoutesManager.login);
                 },),
               ],

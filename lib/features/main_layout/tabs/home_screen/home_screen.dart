@@ -3,7 +3,7 @@ import 'package:evently/core/widgets/categoey_item.dart';
 import 'package:evently/core/widgets/custom_tab_bar.dart';
 import 'package:evently/features/main_layout/tabs/home_screen/category_item.dart';
 import 'package:evently/models/category.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,10 +17,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
- 
-  int isSelect =0; 
+  int isSelect =0;
   @override
   Widget build(BuildContext context) {
+    AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     return  Scaffold( 
      body: Column( 
       children: [ 
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Column(  
                       mainAxisAlignment: MainAxisAlignment.center,
                    children: [
-                    Text('Welcome Back', style: Theme.of(context).textTheme.titleSmall),
+                    Text(appLocalizations.welcome_back, style: Theme.of(context).textTheme.titleSmall),
                     Text('Eslam Mohamd', style: Theme.of(context).textTheme.titleMedium,),
                     SizedBox(height: 8.h,),
                     Row(
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 SizedBox(height: 10,),
-               CustomTabBar(category: CategoryModel.categoriesWithAll, selectedForGroundColor:ColorsManager.blue ,selectedbackGroundColor: ColorsManager.white,unSelectedbackGroundColor:Colors.transparent,unSelectedForGroundColor:ColorsManager.whiteBlue ,),
+               CustomTabBar(category: CategoryModel.GetCategoriesWithAll(context), selectedForGroundColor:ColorsManager.blue ,selectedbackGroundColor: ColorsManager.white,unSelectedbackGroundColor:Colors.transparent,unSelectedForGroundColor:ColorsManager.whiteBlue ,),
               ],
             ),
           ),

@@ -3,6 +3,7 @@ import 'package:evently/core/resourses/colors_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 typedef OnChange = void Function(String?);
 class Profile extends StatefulWidget {
@@ -17,6 +18,7 @@ class _ProfileState extends State<Profile> {
   String selectedTheme = 'Light';
   @override
   Widget build(BuildContext context) {
+    AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     return Scaffold( 
       body: Column(  
        // mainAxisAlignment: MainAxisAlignment.start,
@@ -54,7 +56,7 @@ class _ProfileState extends State<Profile> {
             children: [
            builDropDown(
             selectedItemVeiw: selectedLanguage,
-            menueItems: ['English', 'العربيه'], textline: 'Language',onChange: (newLang){
+            menueItems: ['English', 'العربيه'], textline: appLocalizations.language,onChange: (newLang){
              selectedLanguage = newLang!;
              setState(() {
                
@@ -62,7 +64,7 @@ class _ProfileState extends State<Profile> {
            }),
            builDropDown(
             selectedItemVeiw: selectedTheme,
-            textline: 'Theme', menueItems: ['Light','Dark'], onChange: (newTheme){
+            textline: appLocalizations.theme, menueItems: [appLocalizations.light,appLocalizations.dark], onChange: (newTheme){
              setState(() {
                selectedTheme = newTheme!;
              });
