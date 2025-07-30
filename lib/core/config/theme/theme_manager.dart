@@ -7,6 +7,13 @@ abstract  class ThemeManager {
   static final ThemeData light = ThemeData( 
     primaryColor: ColorsManager.blue, 
     useMaterial3: false,
+      cardTheme: CardTheme(
+        color: ColorsManager.ofWhite,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        elevation: 20,
+      ),
     // AppBar Widget
     appBarTheme: AppBarTheme( 
       backgroundColor:ColorsManager.whiteBlue , 
@@ -70,7 +77,9 @@ iconTheme: IconThemeData(
   color: ColorsManager.white
 ), 
 
-textTheme: TextTheme( 
+textTheme: TextTheme(
+  titleMedium: GoogleFonts.inter(fontSize: 24.sp, fontWeight: FontWeight.w500, color: ColorsManager.white),
+  titleSmall: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w500, color: ColorsManager.white),
   labelMedium: GoogleFonts.inter(color: ColorsManager.black, fontSize: 20.sp,fontWeight: FontWeight.w900),
   labelSmall: GoogleFonts.inter(color: ColorsManager.blue, fontSize: 20.sp,fontWeight: FontWeight.w900),
   
@@ -81,6 +90,13 @@ textTheme: TextTheme(
   static final ThemeData dark = ThemeData(  
     primaryColor: ColorsManager.drakBlue, 
     useMaterial3: false,
+    cardTheme: CardTheme(
+      color: ColorsManager.drakBlue,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.r),
+      ),
+      elevation: 20,
+    ),
     // AppBar Widget
     appBarTheme: AppBarTheme( 
       backgroundColor:ColorsManager.drakBlue , 
@@ -92,11 +108,11 @@ textTheme: TextTheme(
     scaffoldBackgroundColor: ColorsManager.drakBlue, 
      // decoration => TextFormFeild Widget 
     inputDecorationTheme: InputDecorationTheme( 
-      hintStyle: GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500, color: ColorsManager.grey),
-      labelStyle: GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500, color: ColorsManager.grey),
+      hintStyle: GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500, color: ColorsManager.blue),
+      labelStyle: GoogleFonts.inter(fontSize: 16.sp, fontWeight: FontWeight.w500, color: ColorsManager.ofWhite),
         enabledBorder:OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
-          borderSide: BorderSide(color: ColorsManager.grey,width: 1.w),
+          borderSide: BorderSide(color: ColorsManager.blue,width: 1.w),
         ) ,
         focusedBorder:OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.r),
@@ -145,12 +161,15 @@ textTheme: TextTheme(
 //   // notchMargin: 8.0, 
 //   padding: EdgeInsets.zero, 
   
-// ), 
+// ),
 iconTheme: IconThemeData( 
-  color: ColorsManager.white
+  color: ColorsManager.ofWhite
 ), 
 
-textTheme: TextTheme( 
+textTheme: TextTheme(
+
+  titleMedium: GoogleFonts.inter(fontSize: 24.sp, fontWeight: FontWeight.w500, color: ColorsManager.ofWhite),
+  titleSmall: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w500, color: ColorsManager.ofWhite),
   labelMedium: GoogleFonts.inter(color: ColorsManager.black, fontSize: 20.sp,fontWeight: FontWeight.w900),
   labelSmall: GoogleFonts.inter(color: ColorsManager.blue, fontSize: 20.sp,fontWeight: FontWeight.w900),
   

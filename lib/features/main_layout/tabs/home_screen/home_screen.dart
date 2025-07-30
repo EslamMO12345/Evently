@@ -40,23 +40,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     Column(  
                       mainAxisAlignment: MainAxisAlignment.center,
                    children: [
-                    Text('Welcome Back', style: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w400, color: ColorsManager.white),),
-                    Text('Eslam Mohamd', style: GoogleFonts.inter(fontSize: 24.sp, fontWeight: FontWeight.w500, color: ColorsManager.white),), 
+                    Text('Welcome Back', style: Theme.of(context).textTheme.titleSmall),
+                    Text('Eslam Mohamd', style: Theme.of(context).textTheme.titleMedium,),
                     SizedBox(height: 8.h,),
                     Row(
                       children: [ 
-                        Icon(Icons.location_on, color: ColorsManager.white,), 
+                        Icon(Icons.location_on,),
                         SizedBox(width: 4.w,),
-                        Text('Cairo, Egypt', style: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.w500, color: ColorsManager.white),),
+                        Text('Cairo, Egypt', style: Theme.of(context).textTheme.titleSmall),
                       ],
                     ),
                     ],
                     ),  
                     Spacer(),
-                    Icon(Icons.light_mode, color: ColorsManager.white,), 
+                    Icon(Icons.light_mode,),
                     Card(child: Padding(
                       padding: REdgeInsets.all(8.0),
-                      child: Text('EN', style: GoogleFonts.inter(color: ColorsManager.blue, fontSize: 14, fontWeight:FontWeight.bold),),
+                      child: Text('EN', style: Theme.of(context).textTheme.labelSmall/*.copyWith(
+                        fontSize: 16.sp,
+                      ),*/
+                      ),
                     )),
                   ],
                 ),

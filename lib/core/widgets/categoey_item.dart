@@ -41,8 +41,9 @@ class CategoryItemmm extends StatelessWidget {
          // Spacer(), 
           Padding(
             padding: REdgeInsets.all(8.0),
-            child: Card(  
-              color: ColorsManager.whiteBlue,
+            child: Card(
+             // color: Theme.of(context).cardTheme!,
+              //color: ColorsManager.whiteBlue,
               child: Row( 
                 children: [ 
                  Expanded(child: Text('Meeting for Updating The Development Method ',style: GoogleFonts.inter(),)),
