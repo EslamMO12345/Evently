@@ -1,4 +1,3 @@
-import 'package:evently/core/resourses/colors_manager.dart';
 import 'package:evently/models/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

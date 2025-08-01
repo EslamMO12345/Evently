@@ -1,9 +1,12 @@
 import 'package:evently/core/resourses/assets_manger.dart';
 import 'package:evently/core/resourses/colors_manager.dart';
+import 'package:evently/providers/config_provider.dart';
+import 'package:evently/providers/language_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 typedef OnChange = void Function(String?);
 class Profile extends StatefulWidget {
@@ -18,6 +21,9 @@ class _ProfileState extends State<Profile> {
   String selectedTheme = 'Light';
   @override
   Widget build(BuildContext context) {
+    var themeProvider = Provider.of<ThemeProvider>(context);
+    var langProvider = Provider.of<LanguageProvider>(context);
+
     AppLocalizations appLocalizations = AppLocalizations.of(context)!;
     return Scaffold( 
       body: Column(  
@@ -55,19 +61,16 @@ class _ProfileState extends State<Profile> {
            child: Column(
             children: [
            builDropDown(
-            selectedItemVeiw: selectedLanguage,
+            selectedItemVeiw: langProvider.isEnglish? 'English' : 'العربيه',
             menueItems: ['English', 'العربيه'], textline: appLocalizations.language,onChange: (newLang){
-             selectedLanguage = newLang!;
-             setState(() {
-               
-             });
+            langProvider.ChangeAppLang(newLang == 'English'? 'en': 'ar');
            }),
            builDropDown(
-            selectedItemVeiw: selectedTheme,
+            selectedItemVeiw: themeProvider.isDark? appLocalizations.dark:appLocalizations.light,
             textline: appLocalizations.theme, menueItems: [appLocalizations.light,appLocalizations.dark], onChange: (newTheme){
-             setState(() {
-               selectedTheme = newTheme!;
-             });
+
+               themeProvider.ChangeAppTheme(newTheme == appLocalizations.light ? ThemeMode.light : ThemeMode.dark);
+
            })
             ],
            ),

@@ -20,7 +20,7 @@ class CustomTextFormFeild extends StatelessWidget {
       decoration: InputDecoration(
         suffixIcon:suffixIcon !=null? Icon(suffixIcon, color: ColorsManager.grey,) : null,
         labelText: label, 
-        hintText: hint !=null ? hint: null, 
+        hintText: hint, 
         prefixIcon:prefixIcon != null ? Icon(prefixIcon,color: ColorsManager.grey,) : null,
       ),
     );

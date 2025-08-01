@@ -1,4 +1,3 @@
-import 'dart:ui_web';
 
 import 'package:evently/core/resourses/assets_manger.dart';
 import 'package:evently/core/routes/routes_manager.dart';
@@ -10,7 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart' ;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Login extends StatelessWidget {
-   Login({super.key});
+   const Login({super.key});
 
   @override
   Widget build(BuildContext context) {

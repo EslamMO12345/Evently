@@ -1,13 +1,10 @@
 import 'package:evently/core/resourses/assets_manger.dart';
-import 'package:evently/core/resourses/colors_manager.dart';
 import 'package:evently/core/routes/routes_manager.dart';
 import 'package:evently/core/widgets/custom_elevated_bottom.dart';
 import 'package:evently/core/widgets/custom_text_bottom.dart';
 import 'package:evently/core/widgets/custom_text_form_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Register extends StatelessWidget {

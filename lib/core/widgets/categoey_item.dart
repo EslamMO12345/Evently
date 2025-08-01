@@ -1,4 +1,3 @@
-import 'dart:ui_web';
 
 import 'package:evently/core/resourses/assets_manger.dart';
 import 'package:evently/core/resourses/colors_manager.dart';

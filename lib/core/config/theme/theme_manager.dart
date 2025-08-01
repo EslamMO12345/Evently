@@ -14,7 +14,7 @@ abstract  class ThemeManager {
         ),
         elevation: 20,
       ),
-    // AppBar Widget
+     // AppBar Widget
     appBarTheme: AppBarTheme( 
       backgroundColor:ColorsManager.whiteBlue , 
       foregroundColor: ColorsManager.black1C,
@@ -86,7 +86,8 @@ textTheme: TextTheme(
 )
   );
  
- 
+
+
   static final ThemeData dark = ThemeData(  
     primaryColor: ColorsManager.drakBlue, 
     useMaterial3: false,

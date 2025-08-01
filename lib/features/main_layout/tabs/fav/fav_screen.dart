@@ -1,4 +1,3 @@
-import 'package:evently/core/resourses/colors_manager.dart';
 import 'package:evently/core/widgets/custom_text_form_feild.dart';
 import 'package:evently/core/widgets/categoey_item.dart';
 import 'package:flutter/material.dart';
