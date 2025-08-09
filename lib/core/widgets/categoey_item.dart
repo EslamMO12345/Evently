@@ -1,4 +1,5 @@
 
+import 'package:evently/core/extentions/date_extention.dart';
 import 'package:evently/core/resourses/assets_manger.dart';
 import 'package:evently/core/resourses/colors_manager.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class CategoryItemmm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DateTime eventDate = DateTime.now();
     return  Container( 
       margin: REdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration( 
@@ -30,8 +32,8 @@ class CategoryItemmm extends StatelessWidget {
               child: Column( 
 
                 children: [ 
-                  Text('24', style: GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.bold, color: ColorsManager.blue),),
-                  Text('Nov', style: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.bold, color: ColorsManager.blue),),
+                  Text(eventDate.day.toString(), style: GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.bold, color: ColorsManager.blue),),
+                  Text(eventDate.veiwMonthText, style: GoogleFonts.inter(fontSize: 14.sp, fontWeight: FontWeight.bold, color: ColorsManager.blue),),
                 ],
               ),
             ),
