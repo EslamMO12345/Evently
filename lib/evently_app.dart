@@ -1,4 +1,5 @@
 import 'package:evently/core/config/theme/theme_manager.dart';
+import 'package:evently/core/prefs_manager/prefs_manager.dart';
 import 'package:evently/core/routes/routes_manager.dart';
 import 'package:evently/providers/config_provider.dart';
 import 'package:evently/providers/language_provider.dart';
@@ -26,7 +27,7 @@ class EventlyApp extends StatelessWidget {
         initialRoute:RoutesManager.mianlayout,
         theme:ThemeManager.light,
         darkTheme:ThemeManager.dark,
-        themeMode: themeProvider.currentTheme,
+        themeMode: PrefsManager.getTheme()?? ThemeMode.light,
 
         localizationsDelegates: [
           AppLocalizations.delegate,
@@ -35,7 +36,7 @@ class EventlyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
 
-       locale:Locale(langProvider.currentLang),
+       locale:Locale(PrefsManager.getLanguage()??'en'),
         supportedLocales: [
           Locale('en'), // English
           Locale('ar'), // Arabic

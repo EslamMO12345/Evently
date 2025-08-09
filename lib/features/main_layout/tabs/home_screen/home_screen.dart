@@ -66,11 +66,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     InkWell(
                       onTap: () {
                         //langProvider.currentLang;
-                        langProvider.ChangeAppLang(langProvider.isEnglish? 'ar' : 'en');
+                        langProvider.ChangeAppLang(LanguageProvider.isEnglish? 'ar' : 'en');
                       },
                       child: Card(child: Padding(
                         padding: REdgeInsets.all(8.0),
-                        child: Text(langProvider.currentLang == 'en' ? 'EN' : 'Ar', style: Theme.of(context).textTheme.labelSmall/*.copyWith(
+                        child: Text(LanguageProvider.currentLang == 'en' ? 'EN' : 'Ar', style: Theme.of(context).textTheme.labelSmall/*.copyWith(
                         fontSize: 16.sp,
                       ),*/
                         ),

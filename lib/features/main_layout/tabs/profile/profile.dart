@@ -61,7 +61,7 @@ class _ProfileState extends State<Profile> {
            child: Column(
             children: [
            builDropDown(
-            selectedItemVeiw: langProvider.isEnglish? 'English' : 'العربيه',
+            selectedItemVeiw: LanguageProvider.isEnglish?'English':'العربيه',
             menueItems: ['English', 'العربيه'], textline: appLocalizations.language,onChange: (newLang){
             langProvider.ChangeAppLang(newLang == 'English'? 'en': 'ar');
            }),
